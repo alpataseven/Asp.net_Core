@@ -13,5 +13,9 @@ namespace netCoreProject.Controllers
         {
             return PartialView();
         }
+        public PartialViewResult NavbarPartial()
+        {
+            return PartialView();
+        }
     }
 }
