@@ -25,22 +25,22 @@ namespace BusinessLayer.Concrete
 
         public void TAdd(Service t)
         {
-            _servicedal.Insert(t);
+            throw new NotImplementedException();
         }
 
         public void TDelete(Service t)
         {
-            _servicedal.Delete(t);
+            throw new NotImplementedException();
         }
 
         public Service TGetById(int id)
         {
-            return _servicedal.GetById(id);
+            throw new NotImplementedException();
         }
 
         public void TUpdate(Service t)
         {
-            _servicedal.Update(t);
+            throw new NotImplementedException();
         }
     }
 }
