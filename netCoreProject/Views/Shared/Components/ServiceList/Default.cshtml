@@ -9,31 +9,14 @@
       <p>Aşağıda belirtmiş olduğum hizmetleri sizlere sunmaktan mutluluk duyuyorum. Hizmetleri almak için iletişim kısmından bana ulaşabilirsiniz.</p>
     </div>
  <div class="row">
-      <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up">
-        <div class="icon"><i class="bi bi-filetype-cs"></i></div>
-        <h4 class="title"><a href="">Lorem Ipsum</a></h4>
-      </div>
-      <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="100">
-        <div class="icon"><i class="bi bi-filetype-java"></i></div>
-        <h4 class="title"><a href="">Dolor Sitema</a></h4>
-      </div>
-      <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="200">
-        <div class="icon"><i class="bi bi-camera"></i></div>
-        <h4 class="title"><a href="">Sed ut perspiciatis</a></h4>
-      </div>
-      <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="300">
-        <div class="icon"><i class="bi bi-binoculars"></i></div>
-        <h4 class="title"><a href="">Magni Dolores</a></h4>
-      </div>
-      <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="400">
-        <div class="icon"><i class="bi bi-brightness-high"></i></div>
-        <h4 class="title"><a href="">Nemo Enim</a></h4>
-      </div>
-      <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="500">
-        <div class="icon"><i class="bi bi-calendar4-week"></i></div>
-        <h4 class="title"><a href="">Eiusmod Tempor</a></h4>
-      </div>
+            @foreach (var item in Model)
+            {
+               <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up">
+                    <div class="icon"><i class="@item.ImageUrl"></i></div>
+                <h4 class="title"><a href="">@item.Title</a></h4>
+               </div> 
+            }
+            
     </div>
-
   </div>
 </section><!-- End Services Section -->
