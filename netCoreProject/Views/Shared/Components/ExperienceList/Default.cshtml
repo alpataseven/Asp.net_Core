@@ -1,0 +1,28 @@
+﻿@using EntityLayer.Concrete
+@model List<Experience>
+<!-- ======= Resume Section ======= -->
+<section id="resume" class="resume">
+  <div class="container"> <!--Container start-->
+
+    <div class="section-title">
+      <h2>Deneyimlerim</h2>
+      <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+    </div>
+
+    <div class="row"> <!--row start-->
+
+    <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100"><!--Col2 start-->
+            @foreach (var item in Model)
+            {   
+              <div class="resume-item">
+                <h4>@item.Name</h4>
+                <h5>@item.Date</h5>
+                <p><em>@item.City</em></p>
+                <p>@item.Description</p>
+              </div>
+            }
+            </div><!--Col2 end--> 
+    </div><!--row end-->
+
+  </div> <!--Container end-->
+</section><!-- End Resume Section -->

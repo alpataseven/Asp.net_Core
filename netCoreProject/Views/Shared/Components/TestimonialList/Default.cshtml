@@ -1,0 +1,34 @@
+﻿@using EntityLayer.Concrete
+@model List<Testimonial>
+<!-- ======= Testimonials Section ======= -->
+<section id="testimonials" class="testimonials section-bg">
+    <div class="container"><!--Container start-->
+
+      <div class="section-title">
+        <h2>Testimonials</h2>
+        <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+      </div>
+
+      <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
+        
+
+          <div class="swiper-slide">
+            <div class="testimonial-item" data-aos="fade-up">
+                @foreach (var item in Model){
+              <p>
+                <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                    @item.Comment
+                <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+              </p>
+              <img src="@item.ImageUrl" class="testimonial-img" alt="">
+              <h3>@item.ClientName</h3>
+              <h4>@item.Company</h4>
+              <hr>
+                }
+                
+            </div>
+          </div><!-- End testimonial item -->
+      </div>
+
+    </div><!--Container end-->
+  </section><!-- End Testimonials Section -->
