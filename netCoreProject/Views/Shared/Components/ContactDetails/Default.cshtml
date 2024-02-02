@@ -1,23 +1,29 @@
-﻿<div class="col-lg-5 d-flex align-items-stretch">
+﻿@using EntityLayer.Concrete
+@model List<Contact>
+<div class="col-lg-5 d-flex align-items-stretch">
           <div class="info">
+        @foreach (var item in Model)
+        {
+            <h4>@item.Title</h4>
+            <hr>
             <div class="address">
               <i class="bi bi-geo-alt"></i>
-              <h4>Location:</h4>
-              <p>A108 Adam Street, New York, NY 535022</p>
+              <h4>Adres:</h4>
+              <p>@item.Address</p>
             </div>
 
             <div class="email">
               <i class="bi bi-envelope"></i>
               <h4>Email:</h4>
-              <p>info@example.com</p>
+              <p>@item.Mail</p>
             </div>
 
             <div class="phone">
               <i class="bi bi-phone"></i>
-              <h4>Call:</h4>
-              <p>+1 5589 55488 55s</p>
+              <h4>Telefon:</h4>
+              <p>@item.Phone</p>
             </div>
-
-            <iframe src="https://www.google.com/maps/place/%C4%B0stanbul+Gedik+%C3%9Cniversitesi+Kartal+Kamp%C3%BCs%C3%BC/@40.909258,29.1714542,14z/data=!4m6!3m5!1s0x14cac4ba96bbab9d:0x96887e0c51d7dfd3!8m2!3d40.9015423!4d29.2193774!16s%2Fg%2F120khcv3?hl=tr-TR&entry=ttu" frameborder="0" style="border:0; width: 100%; height: 290px;" allowfullscreen></iframe>
+        }
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621" frameborder="0" style="border:0; width: 100%; height: 290px;" allowfullscreen></iframe>
           </div>
         </div>
