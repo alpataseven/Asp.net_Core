@@ -16,12 +16,21 @@ namespace netCoreProject.Controllers
         [HttpGet]
         public IActionResult AddSkill()
         {
+            ViewBag.v1 = "Yetenek Ekleme";
+            ViewBag.v2 = "Yetenekler";
+            ViewBag.v3 = "Yetenek Ekleme";
             return View();
         }
         [HttpPost]
         public IActionResult AddSkill(Skill skill)
         {
             skillManager.TAdd(skill);
+            return RedirectToAction("Index");
+        }
+        public IActionResult DeleteSkill(int id) 
+        {
+            var values = skillManager.TGetById(id);
+            skillManager.TDelete(values);
             return RedirectToAction("Index");
         }
     }

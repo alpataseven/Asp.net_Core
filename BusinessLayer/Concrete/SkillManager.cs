@@ -33,6 +33,11 @@ namespace BusinessLayer.Concrete
             _skillDal.Delete(t);
         }
 
+        public void TDelete(int id)
+        {
+            throw new NotImplementedException();
+        }
+
         public Skill TGetById(int id)
         {
             return _skillDal.GetById(id);
