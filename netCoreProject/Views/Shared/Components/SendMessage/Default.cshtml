@@ -1,28 +1,20 @@
-﻿<div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
-          <form method="post" role="form" class="php-email-form">
-            <div class="row">
-              <div class="form-group col-md-6">
-                <label for="name">Adınız</label>
-                <input type="text" name="Name" class="form-control" id="name" required>
-              </div>
-              <div class="form-group col-md-6">
-                <label for="name">Mail Adresiniz</label>
-                <input type="email" class="form-control" name="Mail" id="email" required>
-              </div>
+﻿<div class="col-md-6" data-aos="zoom-in" data-aos-delay="100">
+    <div class="bg-light my-2 p-3 pt-2">
+        <form action="https://formspree.io/your@email.com"
+              method="POST">
+            <div class="form-group my-2">
+                <label for="name" class="form-label fw-bolder">İsim</label>
+                <input class="form-control" type="text" id="name" name="name" required>
             </div>
-            <div class="form-group">
-              <label for="name">Subject</label>
-              <input type="text" class="form-control" name="subject" id="subject" required>
+            <div class="form-group my-2">
+                <label for="email" class="form-label fw-bolder">E-mail</label>
+                <input class="form-control" type="email" id="email" name="_replyto" required>
             </div>
-            <div class="form-group">
-              <label for="name">Mesajınız</label>
-              <textarea class="form-control" name="Content" rows="10" required></textarea>
+            <div class="form-group my-2">
+                <label for="message" class="form-label fw-bolder">Mesaj</label>
+                <textarea class="form-control" style="resize: none;" id="message" name="message" rows="4" required></textarea>
             </div>
-            <div class="my-3">
-              <div class="loading">Loading</div>
-              <div class="error-message"></div>
-              <div class="sent-message">Your message has been sent. Thank you!</div>
-            </div>
-            <div class="text-center"><button type="submit">Send Message</button></div>
-          </form>
-        </div>
+            <button class="btn btn-primary mt-2" type="submit">Gönder</button>
+        </form>
+    </div>
+</div>

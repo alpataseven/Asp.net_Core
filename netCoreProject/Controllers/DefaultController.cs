@@ -20,6 +20,14 @@ namespace netCoreProject.Controllers
         {
             return PartialView();
         }
+        public PartialViewResult FooterPartial()
+        {
+            return PartialView();
+        }
+        public PartialViewResult ScriptPartial()
+        {
+            return PartialView();
+        }
 
         [HttpGet]
         public PartialViewResult SendMessage() 
