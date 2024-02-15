@@ -1,29 +1,28 @@
 ﻿@using EntityLayer.Concrete
 @model  List<Portfolio>
-<!-- ======= Portfolio Section ======= -->
-<section id="portfolio" class="portfolio section-bg">
-    <div class="container"> <!--Container start-->
 
-      <div class="section-title">
-        <h2>Projelerim</h2>
-        <p>Projelerimi aşağıda inceleyebilirsiniz.</p>
-        </br>
-
-      <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="100"> <!--Cont2 start-->
-            @foreach (var item in Model)
+<div class="section px-2 px-lg-4 pt-5" id="portfolio">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="marker marker-center">Projelerim </h2>
+        </div>
+        <div class="grid bp-gallery pb-3" data-aos="zoom-in-up" data-aos-delay="100">
+            <div class="grid-sizer"></div>
+            @foreach(var item in Model)
             {
-                    <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-                        <div class="portfolio-wrap">
-                            <img src="@item.ImageURL" class="img-fluid" alt="">
-                            <div class="portfolio-links">
-                                    <a href="@item.ImageURL2" data-gallery="portfolioGallery" class="portfolio-lightbox" title="@item.ProjectName"><i class="bx bx-plus"></i></a>
-                                <a href="@item.ProjectURL" title="More Details"><i class="bx bx-link"></i></a>
-                            </div>
-                        </div>
-                    </div>
+                <div class="grid-item">
+                    <a href="@item.ProjectURL">
+                        <figure class="portfolio-item">
+                            <img src="@item.ImageURL" data-bp="@item.ImageURL" />
+                            <figcaption>
+                                <h4 class="h5 mb-0">@item.ProjectName</h4>
+                                <div>@item.ProjectURL</div>
+                            </figcaption>
+                        </figure>
+                    </a>
+                </div>
             }
-
-      </div><!--Cont2 end-->
-
-    </div> <!--container end-->
-  </section><!-- End Portfolio Section -->
+            
+        </div>
+    </div>
+</div>
