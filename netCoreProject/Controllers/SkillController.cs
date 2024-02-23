@@ -33,5 +33,10 @@ namespace netCoreProject.Controllers
             skillManager.TDelete(values);
             return RedirectToAction("Index");
         }
+        public IActionResult EditSkill(int id)
+        {
+            var values = skillManager.TGetById(id);
+            return View(values);
+        }
     }
 }
